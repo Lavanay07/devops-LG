@@ -1,13 +1,32 @@
-# annotated-doc==0.0.4
-# annotated-types==0.7.0
-# anyio==4.12.1
-# click==8.3.1
-# fastapi==0.128.0
-# h11==0.16.0
-# idna==3.11
-# pydantic==2.12.5
-# pydantic_core==2.41.5
-# starlette==0.50.0
-# typing-inspection==0.4.2
-# typing_extensions==4.15.0
-# uvicorn==0.40.0
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devops-app
+  template:
+    metadata:
+      labels:
+        app: devops-app
+    spec:
+      containers:
+        - name: devops-app
+          image: <initials>/devops-app:1.0.0
+          ports:
+            - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: devops-app-service
+spec:
+  selector:
+    app: devops-app
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
+  type: NodePort
