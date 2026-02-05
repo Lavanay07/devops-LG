@@ -56,5 +56,3 @@ def read_root():
 
     }
     
-
-
