@@ -53,4 +53,6 @@ def read_root():
     return {
         "message": "Welcome to the DevOps Demo App!",
         "available_endpoints": ["/health", "/version", "/env", "/tips"]
+
     }
+
