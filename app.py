@@ -55,4 +55,6 @@ def read_root():
         "available_endpoints": ["/health", "/version", "/env", "/tips"]
 
     }
+    
+
 
