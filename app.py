@@ -5,7 +5,7 @@ import random
 app = FastAPI(
     title="DevOps Demo App",
     description="FastAPI application for DevOps training",
-    version="1.0.0"
+    version="1.0.1"
 )
 
 # A list of random DevOps tips and jokes:
@@ -53,4 +53,5 @@ def read_root():
     return {
         "message": "Welcome to the DevOps Demo App!",
         "available_endpoints": ["/health", "/version", "/env", "/tips"]
+
     }
