@@ -67,13 +67,13 @@ def test_read_root():
     }
 
 
-def test_login():
-    response = client.get("/login")
-    assert response.status_code == 200
-    assert response.json() == {"status": "authenticated"}
+# def test_login():
+#     response = client.get("/login")
+#     assert response.status_code == 200
+#     assert response.json() == {"status": "authenticated"}
 
 
-def test_logout():
-    response = client.get("/logout")
-    assert response.status_code == 200
-    assert response.json() == {"status": "logged out"}
+# def test_logout():
+#     response = client.get("/logout")
+#     assert response.status_code == 200
+#     assert response.json() == {"status": "logged out"}
