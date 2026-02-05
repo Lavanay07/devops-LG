@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: devops-app
-          image: <initials>/devops-app:1.0.0
+          image: LG/devops-app:1.0.0
           ports:
             - containerPort: 8000
 ---
